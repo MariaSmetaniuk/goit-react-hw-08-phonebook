@@ -4,6 +4,7 @@ export const theme = {
     white: '#fff',
     text: '#4b4b4b',
     border: '#7c7c7c',
+    line: '#e4e4e4',
     background: '#eff1fb',
     primary: '#cdd4f0',
     secondary: '#526198',
@@ -20,8 +21,8 @@ export const theme = {
     xs: '12px',
     s: '16px',
     m: '18px',
-    l: '32px',
-    xl: '64px',
+    l: '24px',
+    xl: '32px',
   },
   fontWeights: {
     normal: 400,
@@ -47,5 +48,6 @@ export const theme = {
     secondary:
       'rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px',
     text: '2px 7px 5px rgba(0, 0, 0, 0.3), 0px -4px 10px rgba(255, 255, 255, 0.3)',
+    header: 'rgba(33, 35, 38, 0.1) 0px 10px 10px -10px',
   },
 };

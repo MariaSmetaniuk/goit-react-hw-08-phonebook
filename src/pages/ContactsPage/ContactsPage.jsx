@@ -10,10 +10,10 @@ import {
 } from 'redux/selectors';
 
 import { Box } from 'components/Box';
-import { ContactForm } from 'components/ContactForm/ContactForm';
-import { Filter } from 'components/Filter/Filter';
-import { ContactList } from 'components/ContactList/ContactList';
-import { Notification } from 'components/Notification/Notification';
+import { ContactForm } from 'components/contacts/ContactForm/ContactForm';
+import { Filter } from 'components/contacts/Filter/Filter';
+import { ContactList } from 'components/contacts/ContactList/ContactList';
+import { Notification } from 'components/contacts/Notification/Notification';
 import { Loader } from 'components/Loader/Loader';
 
 export const ContactsPage = () => {

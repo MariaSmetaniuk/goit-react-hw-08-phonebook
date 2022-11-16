@@ -2,7 +2,7 @@ import { useDispatch } from 'react-redux';
 import { addContact } from 'redux/operations';
 import { Formik } from 'formik';
 import { Box } from 'components/Box';
-import { Button } from 'components/Button/Button.styled';
+import { Button } from 'components/contacts/Button/Button.styled';
 import { Input, Label, FormStyled } from './ContactForm.styled';
 
 const initialValues = {
