@@ -20,48 +20,49 @@
 
 import { Routes, Route } from 'react-router-dom';
 import { GlobalStyle } from './GlobalStyle';
-import { AppBar } from 'components/AppBar/AppBar';
+import { Layout } from 'components/Layout/Layout';
+import { HomePage } from 'pages/HomePage/HomePage';
 import { ContactsPage } from 'pages/ContactsPage/ContactsPage';
 import { LoginPage } from 'pages/LoginPage/LoginPage';
 import { RegisterPage } from 'pages/RegisterPage/RegisterPage';
 import { NotFoundPage } from 'pages/NotFoundPage/NotFoundPage';
 
 // export const App = () => {
-//   const dispatch = useDispatch();
+// const dispatch = useDispatch();
 
-//   useEffect(() => {
-//     dispatch(fetchContacts());
-//   }, [dispatch]);
+// useEffect(() => {
+//   dispatch(fetchContacts());
+// }, [dispatch]);
 
-//   const isContacts = useSelector(selectIsContacts);
-//   const isContactsShown = useSelector(selectIsContactsShown);
-//   const isLoading = useSelector(selectIsLoading);
-//   const errorMessage = useSelector(selectError);
+// const isContacts = useSelector(selectIsContacts);
+// const isContactsShown = useSelector(selectIsContactsShown);
+// const isLoading = useSelector(selectIsLoading);
+// const errorMessage = useSelector(selectError);
 
 //   return (
-//     <Box p={5} as="main">
-//       <Box
-//         width="430px"
-//         p={4}
-//         mx="auto"
-//         bg="white"
-//         borderRadius="md"
-//         boxShadow="primary"
-//         color="text"
-//       >
-//         <h1>Phonebook</h1>
-//         <ContactForm />
-//         <h2>Contacts</h2>
-//         <Box mt={4}>
-//           {errorMessage && <p>{errorMessage}</p>}
-//           {isContacts && <Filter />}
-//           {isLoading && <Loader />}
-//           {isContactsShown && <ContactList />}
-//           {!isContacts && !isLoading && !Error && <Notification />}
-//         </Box>
-//       </Box>
-//       <GlobalStyle />
+// <Box p={5} as="main">
+//   <Box
+//     width="430px"
+//     p={4}
+//     mx="auto"
+//     bg="white"
+//     borderRadius="md"
+//     boxShadow="primary"
+//     color="text"
+//   >
+//     <h1>Phonebook</h1>
+//     <ContactForm />
+//     <h2>Contacts</h2>
+//     <Box mt={4}>
+//       {errorMessage && <p>{errorMessage}</p>}
+//       {isContacts && <Filter />}
+//       {isLoading && <Loader />}
+//       {isContactsShown && <ContactList />}
+//       {!isContacts && !isLoading && !Error && <Notification />}
 //     </Box>
+//   </Box>
+//   <GlobalStyle />
+// </Box>
 //   );
 // };
 
@@ -69,12 +70,13 @@ export const App = () => {
   return (
     <>
       <Routes>
-        <Route path="/" element={<AppBar />}>
+        <Route path="/" element={<Layout />}>
+          <Route index element={<HomePage />} />
           <Route path="register" element={<RegisterPage />} />
           <Route path="login" element={<LoginPage />} />
           <Route path="contacts" element={<ContactsPage />} />
+          <Route path="*" element={<NotFoundPage />} />
         </Route>
-        <Route path="*" element={<NotFoundPage />} />
       </Routes>
       <GlobalStyle />
     </>
