@@ -18,14 +18,15 @@
 // import { Notification } from './Notification/Notification';
 // import { Loader } from './Loader/Loader';
 
+import { lazy } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import { GlobalStyle } from './GlobalStyle';
 import { Layout } from 'components/Layout/Layout';
-import { HomePage } from 'pages/HomePage/HomePage';
-import { ContactsPage } from 'pages/ContactsPage/ContactsPage';
-import { LoginPage } from 'pages/LoginPage/LoginPage';
-import { RegisterPage } from 'pages/RegisterPage/RegisterPage';
-import { NotFoundPage } from 'pages/NotFoundPage/NotFoundPage';
+// import { HomePage } from 'pages/HomePage/HomePage';
+// import { ContactsPage } from 'pages/ContactsPage/ContactsPage';
+// import { LoginPage } from 'pages/LoginPage/LoginPage';
+// import { RegisterPage } from 'pages/RegisterPage/RegisterPage';
+// import { NotFoundPage } from 'pages/NotFoundPage/NotFoundPage';
 
 // export const App = () => {
 // const dispatch = useDispatch();
@@ -65,6 +66,12 @@ import { NotFoundPage } from 'pages/NotFoundPage/NotFoundPage';
 // </Box>
 //   );
 // };
+
+const HomePage = lazy(() => import('pages/HomePage/HomePage'));
+const RegisterPage = lazy(() => import('pages/RegisterPage/RegisterPage'));
+const LoginPage = lazy(() => import('pages/LoginPage/LoginPage'));
+const ContactsPage = lazy(() => import('pages/ContactsPage/ContactsPage'));
+const NotFoundPage = lazy(() => import('pages/NotFoundPage/NotFoundPage'));
 
 export const App = () => {
   return (

@@ -1,5 +1,5 @@
 import { useEffect } from 'react';
-import { fetchContacts } from 'redux/operations';
+import { fetchContacts } from 'redux/contacts/operations';
 // selectors
 import { useSelector, useDispatch } from 'react-redux';
 import {
@@ -16,7 +16,7 @@ import { ContactList } from 'components/contacts/ContactList/ContactList';
 import { Notification } from 'components/contacts/Notification/Notification';
 import { Loader } from 'components/Loader/Loader';
 
-export const ContactsPage = () => {
+const ContactsPage = () => {
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -52,3 +52,5 @@ export const ContactsPage = () => {
     </Box>
   );
 };
+
+export default ContactsPage;
