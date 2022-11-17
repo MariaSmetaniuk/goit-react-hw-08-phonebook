@@ -14,7 +14,7 @@ export const ContactForm = () => {
   const dispatch = useDispatch();
 
   const handleSubmit = ({ name, number }, actions) => {
-    dispatch(addContact({ name, phone: number }));
+    dispatch(addContact({ name, number }));
     actions.resetForm();
   };
 

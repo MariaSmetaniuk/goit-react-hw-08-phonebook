@@ -46,7 +46,7 @@ const ContactsPage = () => {
           {isContacts && <Filter />}
           {isLoading && <Loader />}
           {isContactsShown && <ContactList />}
-          {!isContacts && !isLoading && !Error && <Notification />}
+          {!isContacts && !isLoading && !errorMessage && <Notification />}
         </Box>
       </Box>
     </Box>

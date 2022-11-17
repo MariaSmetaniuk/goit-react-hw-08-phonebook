@@ -6,7 +6,7 @@ import { Box } from 'components/Box';
 import { useAuth } from 'hooks/useAuth';
 
 export const AppBar = () => {
-  const { isLoggenIn } = useAuth();
+  const { isLoggedIn } = useAuth();
   return (
     <Header>
       <Box
@@ -17,7 +17,7 @@ export const AppBar = () => {
         justifyContent="space-between"
       >
         <Navigation />
-        {isLoggenIn ? <UserMenu /> : <AuthNav />}
+        {isLoggedIn ? <UserMenu /> : <AuthNav />}
       </Box>
     </Header>
   );
