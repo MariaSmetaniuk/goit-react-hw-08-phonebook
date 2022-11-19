@@ -26,7 +26,7 @@ export const UserText = styled.p`
   display: flex;
   align-items: center;
   justify-content: center;
-  color: ${p => p.theme.colors.line};
+  color: ${p => p.theme.colors.white};
   font-weight: ${p => p.theme.fontWeights.bold};
   font-size: ${p => p.theme.fontSizes.m};
   text-transform: uppercase;
