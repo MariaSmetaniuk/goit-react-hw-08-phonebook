@@ -2,7 +2,7 @@ import { useDispatch } from 'react-redux';
 import { register } from 'redux/auth/operations';
 import { Formik } from 'formik';
 import { Box } from 'components/Box';
-import { Button } from 'components/contacts/Button/Button.styled';
+import { Button } from 'components/Button/Button.styled';
 import { Input, Label, FormStyled } from './RegisterForm.styled';
 
 const initialValues = {
@@ -36,7 +36,9 @@ export const RegisterForm = () => {
             <Input type="password" name="password" required />
           </Label>
 
-          <Button type="submit">Register</Button>
+          <Box textAling="center">
+            <Button type="submit">Sing Up</Button>
+          </Box>
         </FormStyled>
       </Box>
     </Formik>

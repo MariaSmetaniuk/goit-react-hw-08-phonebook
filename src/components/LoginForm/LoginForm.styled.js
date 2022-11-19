@@ -16,7 +16,7 @@ export const Label = styled.label`
 
 export const Input = styled(Field)`
   display: inline-block;
-  width: 240px;
+  width: 300px;
   margin-top: ${p => p.theme.space[2]}px;
   padding: ${p => p.theme.space[2]}px;
   font-size: ${p => p.theme.fontSizes.s};
